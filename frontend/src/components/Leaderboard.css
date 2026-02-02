@@ -1,0 +1,183 @@
+.leaderboard-paper {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 2rem;
+  animation: slideIn 0.6s ease-out;
+}
+
+.leaderboard-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-title {
+  font-family: 'Space Mono', monospace;
+  background: linear-gradient(135deg, #ffd43b 0%, #ff922b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Podium Section */
+.podium-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  border-radius: 12px;
+  border: 2px solid #ffd43b;
+}
+
+.podium-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: podiumPop 0.6s ease-out backwards;
+}
+
+.podium-card.rank-1 {
+  transform: translateY(-10px);
+  border: 3px solid #ffd43b;
+  animation-delay: 0.1s;
+}
+
+.podium-card.rank-2 {
+  animation-delay: 0.2s;
+  border: 2px solid #adb5bd;
+}
+
+.podium-card.rank-3 {
+  animation-delay: 0.3s;
+  border: 2px solid #ff922b;
+}
+
+.podium-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.podium-rank-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.podium-avatar {
+  margin: 0 auto;
+  border: 3px solid #e9ecef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.leaderboard-table {
+  margin-top: 1.5rem;
+}
+
+.leaderboard-table thead tr th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 1rem;
+}
+
+.leaderboard-table tbody tr {
+  transition: all 0.3s ease;
+  animation: slideInRow 0.5s ease-out backwards;
+}
+
+.leaderboard-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.leaderboard-table tbody tr:nth-child(2) { animation-delay: 0.15s; }
+.leaderboard-table tbody tr:nth-child(3) { animation-delay: 0.2s; }
+.leaderboard-table tbody tr:nth-child(4) { animation-delay: 0.25s; }
+.leaderboard-table tbody tr:nth-child(5) { animation-delay: 0.3s; }
+.leaderboard-table tbody tr:nth-child(6) { animation-delay: 0.35s; }
+.leaderboard-table tbody tr:nth-child(7) { animation-delay: 0.4s; }
+.leaderboard-table tbody tr:nth-child(8) { animation-delay: 0.45s; }
+.leaderboard-table tbody tr:nth-child(9) { animation-delay: 0.5s; }
+.leaderboard-table tbody tr:nth-child(10) { animation-delay: 0.55s; }
+
+.leaderboard-table tbody tr.rank-1 {
+  background: linear-gradient(90deg, #fff5e6 0%, #ffffff 100%);
+}
+
+.leaderboard-table tbody tr.rank-2 {
+  background: linear-gradient(90deg, #f1f3f5 0%, #ffffff 100%);
+}
+
+.leaderboard-table tbody tr.rank-3 {
+  background: linear-gradient(90deg, #ffebe6 0%, #ffffff 100%);
+}
+
+.leaderboard-table tbody tr:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRow {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes podiumPop {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .podium-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .podium-card.rank-1 {
+    transform: translateY(0);
+  }
+  
+  .leaderboard-table {
+    font-size: 0.85rem;
+  }
+}

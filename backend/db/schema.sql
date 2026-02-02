@@ -49,3 +49,29 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+-- Add this after the original trigger
+DELIMITER $$
+
+CREATE TRIGGER trg_update_rank_positions
+AFTER UPDATE ON rankings
+FOR EACH ROW
+BEGIN
+  DECLARE current_rank INT;
+  
+  SELECT COUNT(*) + 1 INTO current_rank
+  FROM rankings
+  WHERE total_score > NEW.total_score;
+  
+  UPDATE rankings
+  SET rank_position = current_rank
+  WHERE candidate_id = NEW.candidate_id;
+END$$
+
+DELIMITER ;
+
+-- Run this after inserting evaluations
+SET @rank = 0;
+UPDATE rankings
+SET rank_position = (@rank := @rank + 1)
+ORDER BY total_score DESC;

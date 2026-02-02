@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-green: #2f9e44;
+  --primary-blue: #1971c2;
+  --primary-orange: #fd7e14;
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(45, 156, 219, 0.1) 0%, transparent 50%);
+}
+
+/* Header Styling */
+.header-section {
+  text-align: center;
+  padding: 2rem 0;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-blue), var(--primary-orange));
+}
+
+.main-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2f9e44 0%, #1971c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Tabs Styling */
+.dashboard-tabs {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.dashboard-tabs [role="tablist"] {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.dashboard-tabs button[role="tab"] {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.dashboard-tabs button[role="tab"]:hover {
+  transform: translateY(-2px);
+}
+
+.dashboard-tabs button[role="tab"][data-active] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-section,
+.dashboard-tabs {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .dashboard-tabs button[role="tab"] {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
