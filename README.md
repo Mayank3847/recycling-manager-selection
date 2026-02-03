@@ -1,7 +1,7 @@
 Recycling Production line Manager selection system.
 
 The end to end candidate evaluation and ranking system will be created to serve the purposes of helping to find the most suitable Recycling Production Line Managers by applying structured AI-like exams and a clear visual dashboard.
-![Dashboard Overview](screenshots/dashboard-hero.png)
+![Dashboard Overview](screenshots/dashboard-hero.jpg)
 
 🌟 Overview
 
@@ -139,7 +139,7 @@ cd frontend
 npm install
 npm run dev
 
-![Start Frontend](screenshots/dashboard-hero.png)
+![Start Frontend](screenshots/dashboard-hero.jpg)
 Open:
 
 http://localhost:5173
@@ -266,4 +266,5 @@ GitHub: https://github.com/Mayank3847
 Gmail : mayankshekhar0303@gmail.com
 LinkedIn : https://www.linkedin.com/in/mayank-shekhar-44a81328a/
 Contact : 7295059168
+
 
