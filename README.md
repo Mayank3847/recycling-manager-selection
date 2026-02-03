@@ -1,9 +1,9 @@
-Recycling Production line Manager selection system.
+****Recycling Production line Manager selection system.****
 
 The end to end candidate evaluation and ranking system will be created to serve the purposes of helping to find the most suitable Recycling Production Line Managers by applying structured AI-like exams and a clear visual dashboard.
 ![Dashboard Overview](screenshots/dashboard-hero.jpg)
 
-🌟 Overview
+🌟 **Overview**
 
 It is not an easy task to hire a production line manager. Considering the role, it requires an individual that is able to manage crises, knowledgeable on sustainability practices, and a team leader.
 This system eases that process judging 40 candidates on three essential dimensions and ranking them automatically.
@@ -18,7 +18,7 @@ Team Motivation & Leadership
 
 The overall score (of 30) is used to achieve the final ranking which is presented in a user-friendly dashboard.
 
-✨ Key Features
+**✨ Key Features**
 
 Top 10 Leaderboard
 See the best candidates immediately, and particularly the best performers.
@@ -50,9 +50,9 @@ The details of the candidates can be copied and shared with the team members eas
 ![Share Button](screenshots/share-button.jpg)
 ![Share Button](screenshots/share-button1.jpg)
 
-🛠️ Technology Stack
+🛠️ ****Technology Stack****
 
-Frontend
+**Frontend**
 
 React (with Vite)
 
@@ -266,5 +266,6 @@ GitHub: https://github.com/Mayank3847
 Gmail : mayankshekhar0303@gmail.com
 LinkedIn : https://www.linkedin.com/in/mayank-shekhar-44a81328a/
 Contact : 7295059168
+
 
 
