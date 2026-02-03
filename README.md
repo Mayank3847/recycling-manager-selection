@@ -74,7 +74,7 @@ Data Generation
 
 Faker.Js to use in realistic candidate profiles.
 
-🚀 Getting Started
+🚀 **Getting Started**
 Prerequisites
 
 Node.js 18+
@@ -85,11 +85,11 @@ npm
 
 A few minutes ☕
 
-1️⃣ Clone the Repository
-git clone <|human|>git clone [github.com/YOUR_USERNAME/recycling-manager-selection](https://github.com/Mayank3847/recycling-manager-selection.git)
+1️⃣** Clone the Repository**
+git clone <|human|>git clone [github.com/Mayank384/recycling-manager-selection](https://github.com/Mayank3847/recycling-manager-selection.git)
 cd recycling-manager-selection
 
-2️⃣ Database Setup
+2️⃣ **Database Setup**
 mysql -u root -p
 
 Create database recycling manager-db;
@@ -103,7 +103,7 @@ EXIT;
 ![Query 4 : Top 5 candidates ](screenshots/Query4_Top_5_Candidates.jpg)
 ![Query 5 : Total Rows Union ](screenshots/Query5_Total_Row.jpg)
 
-3️⃣ Generate Candidates
+3️⃣ **Generate Candidates**
 cd backend/db
 npm install
 
@@ -118,7 +118,7 @@ Expected output:
 
 ✅ 40 reviewed candidates that were successful generated.
 
-4️⃣ Start the Backend
+4️⃣ **Start the Backend**
 cd backend
 npm install
 node server.js
@@ -131,7 +131,7 @@ Result:
 
 Keep this terminal open.
 
-5️⃣ Start the Frontend
+5️⃣** Start the Frontend**
 
 Open a new terminal:
 
@@ -147,7 +147,7 @@ http://localhost:5173
 
 You are now connected to your dashboard.
 
-🎯 How to Use the System
+🎯 **How to Use the System**
 
 Leaderboard: Rapidly recognise the best candidates.
 
@@ -157,7 +157,7 @@ Skill Scores: Skills Strengths and weaknesses will be displayed in real time as 
 
 Sharing: Share candidate information with your colleagues.
 
-🤖 Evaluation Logic
+**🤖 Evaluation Logic**
 
 All the candidates are evaluated on:
 
@@ -187,7 +187,7 @@ Team engagement
 
 The results are automatically added together and rankings are always updated through an automatic database update.
 
-💾 Database Design
+**💾 Database Design**
 
 Three interlinked tables are used in the database:
 
@@ -199,7 +199,7 @@ rankings The total score and rank are auto-calculated.
 
 Rankings are maintained with the help of a MySQL trigger each time evaluations were entered.
 
-🔌 API Endpoints
+**🔌 API Endpoints**
 
 GET /api/candidates -All the candidates whose scores and rankings are available.
 
@@ -207,7 +207,7 @@ GET /api/leaderboard -Only first 10 candidates.
 
 GET /api/health - health check of the server.
 
-🧪 Testing
+**🧪 Testing**
 
 Database Check
 
@@ -223,7 +223,7 @@ Dashboard
 
 http://localhost:5173
 
-🐛 Common Issues & Fixes
+**🐛 Common Issues & Fixes**
 
 Connection error:localhost is unreachable through a web browser browser.
 
@@ -233,7 +233,7 @@ Blank dashboard: Renew the data generator one more time
 
 Busy Port 5000: terminate processes of existing nodes.
 
-📁 Project Structure
+**📁 Project Structure**
 recycling-manager-selection/
 ├── backend/
 │   ├── db/        # schema & data generator
@@ -243,7 +243,7 @@ recycling-manager-selection/
 |human|>|human|>|human|>|human|>|human|>/ screenshots/
 └── README.md
 
-🎨 Design Choices
+**🎨 Design Choices**
 
 Mock API scores are economical and ensure that testing is not complex.
 
@@ -253,19 +253,20 @@ Decision-making is better enhanced by visual scoring.
 
 Layout will be responsive and all devices will be usable.
 
-📸 Screenshots
+**📸 Screenshots**
 
 The screenshots can be evaluated by using all the screenshots in the /screenshots folder.
 
 
 
-👤 Author
+****👤 Author****
 
 Mayank Shekhar
 GitHub: https://github.com/Mayank3847
 Gmail : mayankshekhar0303@gmail.com
 LinkedIn : https://www.linkedin.com/in/mayank-shekhar-44a81328a/
 Contact : 7295059168
+
 
 
 
